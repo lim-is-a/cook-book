@@ -19,8 +19,8 @@ const methodOverride = require('method-override')
  */
 // const templateRouter = require('./controllers/template.js')
 const cookbookRouter = require('./controllers/cookbook')
-const cuisineRouter = require('./controllers/cuisine')
 const recipeRouter = require('./controllers/recipe')
+const cuisineRouter = require('./controllers/cuisine')
 
 
 /* Step 3
@@ -64,8 +64,8 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/recipe', recipeRouter)
 app.use('/cuisine', cuisineRouter)
+app.use('/recipe', recipeRouter)
 app.use('/', cookbookRouter)
 
 /* Step 5
