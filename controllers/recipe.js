@@ -15,7 +15,8 @@ const express = require('express')
  * controller you need.
  * 
  */
-const TemplateModel = require('../models/template.js')
+// const TemplateModel = require('../models/template.js')
+const Recipe = require('../models/Recipe')
 
 /* Step 3 
  * 
@@ -25,7 +26,8 @@ const TemplateModel = require('../models/template.js')
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const templateRouter = express.Router()
+// const templateRouter = express.Router()
+const recipeRouter = express.Router()
 
 /* Step 4
  * 
@@ -36,7 +38,8 @@ const templateRouter = express.Router()
  *
  * TODO: delete this handler; it's just a sample
  */ 
-templateRouter.get('/', (req, res) => {
+// templateRouter.get('/', (req, res) => {
+recipeRouter.get('/', (req, res) => {
   res.send('hello, world');
 })
 
@@ -45,4 +48,5 @@ templateRouter.get('/', (req, res) => {
  * Export the router from the file.
  *
  */
-module.exports = templateRouter;
+// module.exports = templateRouter;
+module.exports = recipeRouter;
