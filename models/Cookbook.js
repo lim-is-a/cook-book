@@ -7,7 +7,8 @@
  * Import mongoose connection
  *
  */
-const mongoose = require('../db/connection.js')
+const mongoose = require('../db/connection')
+const Schema = mongoose.Schema
 
 /* Step 2
  *
