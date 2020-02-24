@@ -17,12 +17,13 @@ const mongoose = require('../db/connection.js')
 // const TemplateModelSchema = new mongoose.Schema({
 //   name: String
 // })
-const TemplateModelSchema = new mongoose.Schema({
-  name: String
+const Cookbook = new Schema({
+  belongsTo: String,
+  createdOn: Date,
 })
 
 /* Step 3
  *
  * TODO: export the schema
  */
-module.exports = mongoose.model('Template', TemplateModelSchema);
+module.exports = mongoose.model('Cookbook', Cookbook);
