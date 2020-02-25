@@ -59,3 +59,28 @@ let newRecipes = [
         comment: "Loved this ",
     },
 ]
+
+// newCookBook
+// newCuisines
+// newRecipes
+let theCuisine;
+
+Recipe.deleteMany().then(()=>{
+    return Cuisine.deleteMany();
+}).then(()=>{
+    return Cookbook.deleteMany();
+}).then(()=>{
+    return Cuisine.create(newCuisines);
+}).then((cuisines)=>{
+    theCuisine = cuisines;
+    return Recipe.create(newRecipes);
+}).then((recipes)=>{
+    recipes[1].coffee = theCuisine[0];
+    return recipes[1].save();
+}).then(()=>{
+    return Cookbook.create(newCookBook)
+}).then(()=>{
+    console.log('database seeded')
+})
+
+
