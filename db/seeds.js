@@ -1,25 +1,25 @@
-let Cookbook = require('../models/Cookbook')
-let Cuisine = require('../models/Cuisine')
+// let Cookbook = require('../models/Cookbook')
+// let Cuisine = require('../models/Cuisine')
 let Recipe = require('../models/Recipe')
 
-let newCookBook = [
-    {
-        belongsTo: 'Arlen',
-        createdOn: new Date(2020, 2, 23)
-    },
+// let newCookBook = [
+//     {
+//         belongsTo: 'Arlen',
+//         createdOn: new Date(2020, 2, 23)
+//     },
 
-]
+// ]
 
-let newCuisines = [
-    {
-        name: "Italian Cuisine",
-        placeOfOrigin: "Italy",
-    },
-    {
-        name: "Mexican Cuisine",
-        placeOfOrigin: "Mexico",
-    },
-]
+// let newCuisines = [
+//     {
+//         name: "Italian Cuisine",
+//         placeOfOrigin: "Italy",
+//     },
+//     {
+//         name: "Mexican Cuisine",
+//         placeOfOrigin: "Mexico",
+//     },
+// ]
 
 let newRecipes = [
     {
