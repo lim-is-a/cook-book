@@ -26,7 +26,7 @@ const Recipe = new Schema({
     qty: Number,
     measurement: String,
   },
-  ]
+  ],
   cooktime: Number,
   directions: String,
   comment: String,
