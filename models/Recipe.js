@@ -20,13 +20,13 @@ const Schema = mongoose.Schema
 // })
 const Recipe = new Schema({
   name: String,
-  ingredients: [
-    {
-    name: String, 
-    qty: Number,
-    measurement: String,
-  },
-  ],
+  // ingredients: [
+  //   {
+  //   name: String, 
+  //   qty: Number,
+  //   measurement: String,
+  // },
+  // ],
   cooktime: Number,
   directions: String,
   comment: String,

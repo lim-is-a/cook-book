@@ -1,13 +1,15 @@
 {{!-- <form method="POST" action="/<TODO: models url here (e.g: /accounts)>"> --}}
 
-<form method="POST" action="/recipes">
+<main>
+  <h1>Add new recipe to My Cookbook</h1>
+  <form method="POST" action="/recipes">
 
-  Name:<input type="text" placeholder="name" name="name" /> <br>
-  Ingredients:<input type="text" placeholder="ingredients" name="ingredients" /> <br>
-  Cook time:<input type="number" placeholder="cooktime" name="cooktime" /><br>
-  Directions<input type="text" placeholder="directions" name="directions" /><br>
-  Comments:<input type="text" placeholder="comments" name="comment" /><br>
+    Name:<input type="text" placeholder="name" name="name" /> <br>
+    {{!-- Ingredients:<input type="text" placeholder="ingredients" name="ingredients" /> <br> --}}
+    Cook time:<input type="number" placeholder="cooktime" name="cooktime" /><br>
+    Directions<input type="text" placeholder="directions" name="directions" /><br>
+    Comments:<input type="text" placeholder="comments" name="comment" /><br>
 
-  <input type="submit" value="Create Recipe" />
-</form>
-
+    <input type="submit" value="Create Recipe" />
+  </form>
+</main>
