@@ -40,7 +40,7 @@ const recipeRouter = express.Router()
  */ 
 // templateRouter.get('/', (req, res) => {
 recipeRouter.get('/', (req, res) => {
-  res.send('hello, world');
+  res.send('hello, world! From recipe.js');
 })
 
 /* Step 6

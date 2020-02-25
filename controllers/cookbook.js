@@ -39,7 +39,7 @@ const cookBookRouter = express.Router()
  */ 
 // templateRouter.get('/', (req, res) => {
 cookBookRouter.get('/', (req, res) => {
-  res.send('hello, world');
+  res.send('hello, world! from cookbook.js');
 })
 
 /* Step 6

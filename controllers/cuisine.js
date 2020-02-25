@@ -38,7 +38,7 @@ const cuisineRouter = express.Router()
  * TODO: delete this handler; it's just a sample
  */ 
 cuisineRouter.get('/', (req, res) => {
-  res.send('hello, world');
+  res.send('hello, world! From cuisine.js');
 })
 
 /* Step 6
