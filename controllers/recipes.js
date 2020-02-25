@@ -33,18 +33,19 @@ const recipeRouter = express.Router()
  * 
  * TODO: Put all request handlers here
  */
-// GET req - take you to createForm
+// #NEW - GET req - take you to createForm
 recipeRouter.get('/new', (req,res)=>{
   res.render('recipes/createForm')
 })
-// POST req - to create/add recipes
+
+// #CREATE - POST req - to create/add recipes
 recipeRouter.post('/', (req, res)=>{
   Recipe.create(req.body).then(()=>{
     res.redirect('/recipes/index')
   })
 })
 
-// GET req - takes you to SPECIFIC recipe
+// #SHOW - GET req - takes you to SPECIFIC recipe
 recipeRouter.get('/:recipeId', (req,res)=>{
   Recipe.findById().then((recipe)=>{
     console.log(recipe);
@@ -52,12 +53,19 @@ recipeRouter.get('/:recipeId', (req,res)=>{
   })
 }) 
 
+// #UPDATE - PUT - update the database
+recipeRouter.put('/:recipeId',(req, res)=>{
+  Recipe.findByIdAndUpdate(req.params.recipeId, req.body).then((recipe)=>{
+    res.redirect('/recipes')
+  })
+})
+
 /* Step 5
  *
  * TODO: delete this handler; it's just a sample
  */ 
 // templateRouter.get('/', (req, res) => {
-  // Takes you to ALL recipes page
+// #INDEX - GET - Takes you to ALL recipes page
 recipeRouter.get('/', (req, res) => {
   Recipe.find().then((recipes)=>{
     console.log(recipes)
