@@ -47,7 +47,7 @@ recipeRouter.post('/', (req, res)=>{
 
 // #SHOW - GET req - takes you to SPECIFIC recipe
 recipeRouter.get('/:recipeId', (req,res)=>{
-  Recipe.findById().then((recipe)=>{
+  Recipe.findById(req.params.recipeId).then((recipe)=>{
     console.log(recipe);
     res.render('recipes/recipe',{recipe})
   })
