@@ -67,6 +67,13 @@ recipeRouter.put('/:recipeId',(req, res)=>{
   })
 })
 
+// #DELETE - DELETE - delete an item & go back to all recipes
+recipeRouter.delete('/:recipeId', (req, res)=>{
+  Recipe.findByIdAndRemove(req.params.recipeId).then(()=>{
+    res.redirect('/recipes')
+  })
+})
+
 /* Step 5
  *
  * TODO: delete this handler; it's just a sample
