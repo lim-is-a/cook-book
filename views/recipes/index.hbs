@@ -2,6 +2,15 @@
     <h1>All Recipes</h1>
 
     {{#each recipes}}
+    <ul>
+        <li>
+            <a href="/recipes/{{id}}">
+                <img src="" alt="Image of {{name}}">
+                {{name}}
+            </a>
+            
+        </li>
+    </ul>
     <p>all recipes</p>
     {{/each}}
 
