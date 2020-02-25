@@ -1,12 +1,24 @@
-<form method="POST" action="/<TODO: models url here (e.g: /accounts)>">
+<form method="POST" action="/recipes">
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  --->
-  <input type="text" value="{{<TODO: model.stringMember (e.g: account.name)}}" placeholder="name" name="<TODO: stringMember (e.g: name)>" />
+  <input type="text" value="{{recipe.name}}" placeholder="name" name="name" />
+  <input type="text" value="{{recipe.ingredients.name}}" placeholder="name" name="ingredients" />
+  <input type="number" value="{{recipe.cooktime}}" placeholder="name" name="cooktime" />
+  <input type="text" value="{{recipe.directions}}" placeholder="name" name="directions" />
+  <input type="text" value="{{recipe.comment}}" placeholder="name" name="comment" />
 
-  <input type="checkbox" name="<TODO: model.booleanMember (e.g: account.isActive)" value="true" />
-
-  <input type="submit" value="Create Shop" />
+  <input type="submit" value="Create Recipe" />
 </form>
+
+
+{{!-- 
+  name: String,
+  ingredients: [
+    {
+    name: String, 
+    qty: Number,
+    measurement: String,
+    },
+  ],
+  cooktime: Number,
+  directions: String,
+  comment: String, --}}
