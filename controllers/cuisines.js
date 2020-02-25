@@ -39,7 +39,7 @@ const cuisineRouter = express.Router()
  */ 
 cuisineRouter.get('/', (req, res) => {
   Cuisine.find().then(()=>{
-    res.render('recipes/index')
+    res.render('cuisines/index')
   })
 })
 
