@@ -53,6 +53,13 @@ recipeRouter.get('/:recipeId', (req,res)=>{
   })
 }) 
 
+// #EDIT - GET req - take you to editForm
+recipeRouter.get('/:recipeId/edit', (req, res)=>{
+  Recipe.findById(req.params.recipeId).then((recipe)=>{
+    res.render('recipes/editForm', {recipe})
+  })
+})
+
 // #UPDATE - PUT - update the database
 recipeRouter.put('/:recipeId',(req, res)=>{
   Recipe.findByIdAndUpdate(req.params.recipeId, req.body).then((recipe)=>{
