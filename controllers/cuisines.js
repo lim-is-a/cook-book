@@ -38,7 +38,9 @@ const cuisineRouter = express.Router()
  * TODO: delete this handler; it's just a sample
  */ 
 cuisineRouter.get('/', (req, res) => {
-  res.send('hello, world! From cuisine.js');
+  Cuisine.find().then(()=>{
+    res.render('recipes/index')
+  })
 })
 
 /* Step 6
