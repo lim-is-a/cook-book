@@ -1,8 +1,10 @@
 <main>
     <H1>All Cuisines</H1>
     <ul>
-    {{#each cuisines}}
-        <li><a href="{{ id }}">{{ cuisine }}</a> </li>
-    {{/each}}
+        {{#each cuisines}}
+        <li>
+            <a href="{{ id }}">{{ name }}</a>
+        </li>
+        {{/each}}
     </ul>
 </main>
