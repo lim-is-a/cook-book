@@ -19,8 +19,8 @@ const methodOverride = require('method-override')
  */
 // const templateRouter = require('./controllers/template.js')
 const cookbookRouter = require('./controllers/cookbook')
-const recipeRouter = require('./controllers/recipe')
-const cuisineRouter = require('./controllers/cuisine')
+const recipeRouter = require('./controllers/recipes')
+const cuisineRouter = require('./controllers/cuisines')
 
 
 /* Step 3
