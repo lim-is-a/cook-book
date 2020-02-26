@@ -21,7 +21,7 @@ const Schema = mongoose.Schema
 const Cuisine = new Schema({
   name: String,
   placeOfOrigin: String,
-  
+  recipes: [{type: Schema.ObjectId, ref: 'Recipe'}]
 })
 
 /* Step 3
