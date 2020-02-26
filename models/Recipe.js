@@ -20,16 +20,18 @@ const Schema = mongoose.Schema
 // })
 const Recipe = new Schema({
   name: String,
-  ingredients: [
-    {
-    name: String, 
-    qty: Number,
-    measurement: String,
-  },
-  ],
+  image: String,
+  ingredients: [{type: Schema.ObjectId, ref: 'Ingredient'}], 
   cooktime: Number,
   directions: String,
   comment: String,
+})
+
+const Ingredient = new Schema({
+    name: String, 
+    qty: Number,
+    measurement: String,
+    recipe: {type: Schema.ObjectId, ref: 'Recipe'}
 })
 
 /* Step 3
