@@ -27,13 +27,6 @@ const Recipe = new Schema({
   comment: String,
 })
 
-const Ingredient = new Schema({
-    name: String, 
-    qty: Number,
-    measurement: String,
-    recipe: {type: Schema.ObjectId, ref: 'Recipe'}
-})
-
 /* Step 3
  *
  * TODO: export the schema

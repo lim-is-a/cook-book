@@ -22,8 +22,7 @@ const Schema = mongoose.Schema
 const Ingredient = new Schema({
     name: String, 
     qty: Number,
-    measurement: String,
-    recipe: {type: Schema.ObjectId, ref: 'Recipe'}
+    measurement: String
 })
 
 /* Step 3
