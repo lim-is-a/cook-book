@@ -5,3 +5,8 @@ h1{
     text-align: center;
     font-size: 45px;
 }
+.cookbookImg{
+    margin: 0 100px;
+    width: 80%;
+    height: 450px;
+}
