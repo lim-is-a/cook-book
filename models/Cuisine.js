@@ -19,7 +19,10 @@ const Schema = mongoose.Schema
 //   name: String
 // })
 const Cuisine = new Schema({
-  name: String,
+  name: {
+    type:String,
+    required: true,
+  },
   placeOfOrigin: String,
   recipes: [{type: Schema.ObjectId, ref: 'Recipe'}]
 })
