@@ -1,6 +1,6 @@
 <main>
   <H1>{{recipe.name}} Recipe! </H1>
-  <a href="/">Back to My Cookbook</a>
+  <a href="/recipes">Back to Recipes</a>
   <a href="./{{recipe.id}}/edit">Edit Recipe</a>
 
   <h4>Ingredients you will need:</h4>
@@ -21,9 +21,9 @@
   <h4>Notes or Comments:</h4>
   <p>{{recipe.comment}}</p>
 
-<form method="POST" action="/recipes/{{recipe.id}}?_method=DELETE">
-  <input type="submit" value="Delete" />
-</form>
+  <form method="POST" action="/recipes/{{recipe.id}}?_method=DELETE">
+    <input type="submit" value="Delete" />
+  </form>
 
 </main>
 
