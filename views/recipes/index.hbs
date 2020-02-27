@@ -1,5 +1,8 @@
 <main>
     <h1>All Recipes</h1>
+     <a href="/recipes/new">Add New Recipe</a>
+
+    <a href="/">Back to My Cookbook</a>
 
     {{#each recipes}}
     <ul>
@@ -8,13 +11,10 @@
                 <img src="{{image}}" alt="Image of {{name}}">
                 {{name}}
             </a>
-            
         </li>
     </ul>
     <p>all recipes</p>
     {{/each}}
 
-    <a href="/recipes/new">Add New Recipe</a>
-
-    <a href="/">Back to My Cookbook</a>
+   
 </main>
