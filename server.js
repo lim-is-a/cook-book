@@ -20,6 +20,7 @@ const methodOverride = require('method-override')
 // const templateRouter = require('./controllers/template.js')
 const cookbookRouter = require('./controllers/cookbook')
 const recipeRouter = require('./controllers/recipes')
+const ingredientRouter = require('./controllers/ingredients')
 const cuisineRouter = require('./controllers/cuisines')
 
 
@@ -66,6 +67,7 @@ app.set('view engine', 'hbs')
  */
 app.use('/cuisines', cuisineRouter)
 app.use('/recipes', recipeRouter)
+app.use('/ingredients', ingredientRouter)
 app.use('/', cookbookRouter)
 
 /* Step 5
