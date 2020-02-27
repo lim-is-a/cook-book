@@ -38,13 +38,6 @@ recipeRouter.get('/new', (req,res)=>{
   res.render('recipes/createForm')
 })
 
-// #CREATE - POST req - to create/add recipes
-recipeRouter.post('/', (req, res)=>{
-  Recipe.create(req.body).then(()=>{
-    res.redirect('/recipes/index')
-  })
-})
-
 // #SHOW - GET req - takes you to SPECIFIC recipe
 recipeRouter.get('/:recipeId', (req,res)=>{
   Recipe.findById(req.params.recipeId).then((recipe)=>{
@@ -62,8 +55,10 @@ recipeRouter.get('/:recipeId/edit', (req, res)=>{
 
 // #UPDATE - PUT - update the database
 recipeRouter.put('/:recipeId',(req, res)=>{
-  Recipe.findByIdAndUpdate(req.params.recipeId, req.body).then((recipe)=>{
-    res.redirect('/recipes')
+  // console.log('in put')
+  Recipe.findByIdAndUpdate(req.params.recipeId, req.body).then(()=>{
+  //  console.log("in find" +req.params.recipeId)
+    res.redirect('/recipes/' + req.params.recipeId)
   })
 })
 
@@ -73,7 +68,12 @@ recipeRouter.delete('/:recipeId', (req, res)=>{
     res.redirect('/recipes')
   })
 })
-
+// #CREATE - POST req - to create/add recipes
+recipeRouter.post('/', (req, res)=>{
+  Recipe.create(req.body).then(()=>{
+    res.redirect('/recipes')
+  })
+})
 /* Step 5
  *
  * TODO: delete this handler; it's just a sample
@@ -94,8 +94,3 @@ recipeRouter.get('/', (req, res) => {
  */
 // module.exports = templateRouter;
 module.exports = recipeRouter;
-
-
-// recipeRouter.get('/:recipeId', (req,res)=>{
-  // console.log()
-// }) 
