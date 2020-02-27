@@ -1,43 +1,34 @@
-{{!-- <form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT"> --}}
+<main>
 
-<form method="POST" action="/recipes?_method=PUT">
+  <h1>Edit recipe</h1>
+    <a href="/recipes/{{recipe.id}}">Back to Recipe</a>
+  
+  {{!-- <form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT"> --}}
+  <form method="POST" action="/recipes/{{recipe.id}}?_method=PUT">
 
-  Name:<input type="text" value="{{recipe.name}}" placeholder="name" name="name" /><br>
+    Name:<input type="text" value="{{recipe.name}}" placeholder="name" name="name" /><br>
 
-  Image: <input type="text" placeholder="image address" name="Image" /> <br>
+    Image: <input type="text" value="{{recipe.image}}"placeholder="image address" name="image" /> <br>
 
-  {{!-- Ingredients:<input type="text" value="{{recipe.ingredients.name}}" placeholder="ingredients" name="ingredients" /><br> --}}
-  <form method="POST" action="/recipe.ingredients">
-    Ingredients: <input type="text" placeholder="name" name="name" />
-    Quantity:<input type="number" placeholder="quantity" name="quantity" />
-    Unit of measurement:
-    <select id="units" name="units">
-      <option value="" placeholder='unit'></option>
-      <option value="ounce">Ounce</option>
-      <option value="cup">Cup</option>
-      <option value="pound">Pound</option>
-      <option value="teaspoon">Teaspoon</option>
-      <option value="tablespoon">Tablespoon</option>
-      <option value="fluid ounce">Fluid Ounce</option>
-    </select>
-    <input type="submit" value="Add ingredients" />
-  </form>
+   
 
-  Cook time:<input type="number" value="{{recipe.cooktime}}" name="cooktime" /><br>
+    Cook time:<input type="number" value="{{recipe.cooktime}}" name="cooktime" /><br>
 
-  {{!-- Directions:<input type="text" value="{{recipe.directions}}"name="directions" /><br> --}}
-  Directions:
-  <textarea type="text" name="directions" cols="30" rows="10" />
-  {{recipe.directions}} 
+    {{!-- Directions:<input type="text" value="{{recipe.directions}}"name="directions" /><br> --}}
+    Directions:
+    <textarea type="text" name="directions" cols="30" rows="10" />
+    {{recipe.directions}} 
   </textarea><br>
 
-  Comments:<input type="text" value="{{recipe.comment}}" name="comment" /><br>
+    Comments:<input type="text" value="{{recipe.comment}}" name="comment" /><br>
 
-  <input type="submit" value="Update Recipe" />
+    <input type="submit" value="Update Recipe" />
 
-</form>
+  </form>
 
-{{!-- <form method="POST" action="<TODO: MODELS URL HERE (e.g: /accounts)>?_method=DELETE"> --}}
-<form method="POST" action="/recipes/{{recipe.id}}?_method=DELETE">
-  <input type="submit" value="Delete" onclick="alert('Recipe deleted!')"/>
-</form>
+  {{!-- <form method="POST" action="<TODO: MODELS URL HERE (e.g: /accounts)>?_method=DELETE"> --}}
+  {{!-- Decided on NO delete button
+  <form method="POST" action="/recipes/{{recipe.id}}?_method=DELETE">
+    <input type="submit" value="Delete" onclick="alert('Recipe deleted!')" />
+  </form> --}}
+</main>

@@ -5,7 +5,7 @@
   <form method="POST" action="/recipes">
 
     Name:<input type="text" placeholder="name" name="name" /> <br>
-    Image: <input type="text" placeholder="image address" name="Image" /> <br>
+    Image: <input type="text" placeholder="image address" name="image" /> <br>
 
     {{!-- Ingredients:<input type="text" value="{{recipe.ingredients.name}}" placeholder="ingredients" name="ingredients" /><br> --}}
     {{!-- <form method="POST" action="/recipe.ingredients">
@@ -29,7 +29,6 @@
     {{!-- Directions<input type="text" placeholder="directions" name="directions" /><br> --}}
     Directions:
     <textarea type="text" name="directions" cols="30" rows="10" />
-    {{recipe.directions}} 
     </textarea><br>
 
     Comments:<input type="text" placeholder="comments" name="comment" /><br>
