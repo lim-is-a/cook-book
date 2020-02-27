@@ -16,6 +16,6 @@ Trello Project Board:
 - https://trello.com/b/W8vdqDwO/project-2-cookbook
 
 Heroku Deploy:
-- https://
+- https://my-cook-book-pr2.herokuapp.com/
 
 
