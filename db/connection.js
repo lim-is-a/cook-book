@@ -10,19 +10,34 @@ const mongoose = require('mongoose');
  *
  */
 // const connectionString = process.env.MONGODB_URI || "mongodb://localhost/<db-name>";
-const connectionString = process.env.MONGODB_URI || "mongodb://localhost/my-cook-book";
+// const connectionString = process.env.MONGODB_URI || "mongodb://localhost/my-cook-book";
 
 
-/* Step 2
- *
- * Open up a connection to the mongo database.
- *
- * NOTE: newUrlParser diables a deprecation warning
- */
-mongoose.connect(connectionString, { useNewUrlParser: true})
-  .then(() => {
-    console.log("connected to mongo at: " + connectionString);
-  });
+// /* Step 2
+//  *
+//  * Open up a connection to the mongo database.
+//  *
+//  * NOTE: newUrlParser diables a deprecation warning
+//  */
+// mongoose.connect(connectionString, { useNewUrlParser: true})
+//   .then(() => {
+//     console.log("connected to mongo at: " + connectionString);
+//   });
+
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+}
+else {
+  mongoose.connect('mongodb://localhost/my-cook-book');
+}
+mongoose.connection.on('error', err => {
+  console.error('MongoDB connection error: ' + err);
+  process.exit(-1);
+  }
+);
+mongoose.connection.once('open', () => {
+  console.log("Mongoose has connected to MongoDB!");
+});
 
 
 /* Export the mongoose object.
