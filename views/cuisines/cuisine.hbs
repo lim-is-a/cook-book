@@ -1,0 +1,10 @@
+<main>
+  <H1>{{cuisine.name}} Cuisine! </H1>
+  <a href="/cuisines">Back to Cuisines</a>
+  <a href="./{{cuisine.id}}/edit">Edit Cuisine</a>
+
+  <form method="POST" action="/cuisines/{{cuisine.id}}?_method=DELETE">
+    <input type="submit" value="Delete" />
+  </form>
+
+</main>
