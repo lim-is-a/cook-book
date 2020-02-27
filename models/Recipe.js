@@ -19,7 +19,10 @@ const Schema = mongoose.Schema
 //   name: String
 // })
 const Recipe = new Schema({
-  name: String,
+  name: {
+    type:String,
+    required: true,
+  },
   image: String,
   ingredients: [{type: Schema.ObjectId, ref: 'Ingredient'}], 
   cooktime: Number,
