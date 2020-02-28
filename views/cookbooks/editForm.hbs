@@ -1,0 +1,16 @@
+<main class="center">
+
+  <header>
+    <nav>
+      <a href="/cookbook">Back to Cookbook</a>
+    </nav>
+    <h1>Add New Cookbook</h1>
+  </header>
+
+  <form method="POST" action="/cookbooks">
+    Belongs To:<input type="text" value="{{cookbook.belongsTo}}"placeholder="belongsTo" name="belongsTo" /> <br>
+   Created On:<input type="text" value="{{cookbook.createdOn}}"placeholder="belongsTo" name="belongsTo" /> <br>
+    <input type="submit" value="Create Cookbook" />
+  </form>
+
+</main>

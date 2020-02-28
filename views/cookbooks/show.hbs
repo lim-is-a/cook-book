@@ -1,0 +1,26 @@
+<main>
+
+  <H1>{{cookbook.belongsTo}}'s Cookbook! </H1>
+
+  <header>
+    <nav>
+      <a href="/cookbooks">Back to Cookbooks</a>
+      <a href="./{{cookbook.id}}/edit">Edit Cookbook</a>
+    </nav>
+  </header>
+
+  <div >
+    <img src="{{cookbook.image}}" alt="">
+  </div>
+  <h4>This book belongs to:</h4>
+  <p>{{cookbook.belongsTo}}</p>
+
+  <h4>Created on: </h4>
+  <p>{{cookbook.createdOn}}</p>
+
+
+  <form method="POST" action="/cookbooks/{{cookbook.id}}?_method=DELETE">
+    <input type="submit" value="Delete" />
+  </form>
+
+</main>
