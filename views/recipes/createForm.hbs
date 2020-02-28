@@ -8,8 +8,9 @@
 
     Name:<input type="text" placeholder="name" name="name" /> <br>
     Image: <input type="text" placeholder="image address" name="image" /> <br>
-
-    Ingredients:<input type="text" placeholder="ingredients" name="ingredients" /><br>
+    Ingredients: <br>
+        <textarea type="text" name="ingredients" cols="50" rows="10" />
+        </textarea><br>
     {{!-- <form method="POST" action="/recipe.ingredients">
       Ingredients: <input type="text" placeholder="name" name="name" />
       Quantity:<input type="number" placeholder="quantity" name="quantity" />
@@ -29,11 +30,14 @@
     Cook time:<input type="number" placeholder="cooktime" name="cooktime" /><br>
 
     {{!-- Directions<input type="text" placeholder="directions" name="directions" /><br> --}}
-    Directions:
-    <textarea type="text" name="directions" cols="30" rows="10" />
+    Directions: <br>
+    <textarea type="text" name="directions" cols="150" rows="15" />
     </textarea><br>
 
-    Comments:<input type="text" placeholder="comments" name="comment" /><br>
+    Comments:<br>
+    {{!-- <input type="text" value="{{recipe.comment}}" name="comment" /> --}}
+    <textarea type="text" name="comments" cols="150" rows="10" />
+    </textarea><br>
 
     <input type="submit" value="Create Recipe" />
   </form>

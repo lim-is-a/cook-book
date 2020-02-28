@@ -1,17 +1,20 @@
 <main>
 
   <h1>Edit recipe</h1>
-    <a href="/recipes/{{recipe.id}}">Back to Recipe</a>
-  
+  <a href="/recipes/{{recipe.id}}">Back to Recipe</a>
+
   {{!-- <form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT"> --}}
   <form method="POST" action="/recipes/{{recipe.id}}?_method=PUT">
 
     Name:<input type="text" value="{{recipe.name}}" placeholder="name" name="name" /><br>
 
-    Image: <input type="text" value="{{recipe.image}}"placeholder="image address" name="image" /> <br>
+    Image: <input type="text" value="{{recipe.image}}" placeholder="image address" name="image" /> <br>
 
-   Ingredients:<input type="text" value="{{recipe.ingredients}}" placeholder="ingredients" name="ingredients" /><br>
-
+    Ingredients: <br>
+    {{!-- <input type="text" value="{{recipe.ingredients}}" placeholder="ingredients" name="ingredients" /><br> --}}
+    <textarea type="text" name="ingredients" cols="50" rows="10" />
+      {{recipe.ingredients}} 
+    </textarea><br>
 
     Cook time:<input type="number" value="{{recipe.cooktime}}" name="cooktime" /><br>
 
@@ -19,9 +22,13 @@
     Directions: <br>
     <textarea type="text" name="directions" cols="150" rows="15" />
     {{recipe.directions}} 
-  </textarea><br>
+    </textarea><br>
 
-    Comments:<input type="text" value="{{recipe.comment}}" name="comment" /><br>
+    Comments:<br>
+    {{!-- <input type="text" value="{{recipe.comment}}" name="comment" /> --}}
+    <textarea type="text" name="comments" cols="150" rows="10" />
+    {{recipe.ingredients}} 
+    </textarea><br>
 
     <input type="submit" value="Update Recipe" />
 
