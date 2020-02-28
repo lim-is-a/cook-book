@@ -1,14 +1,25 @@
-<main>
-  <h1>EDIT Cuisine</h1>
-         <a href="/cuisines/{{cuisine.id}}">Back to Cuisine</a>
+<main class="cuisines" >
 
+  <header>
+
+    <nav>
+      <a href="/cuisines/{{cuisine.id}}">Back to Cuisine</a>
+    </nav>
+
+    <h1>EDIT Cuisine</h1>
+  </header>
 
   <form method="POST" action="/cuisines/{{cuisine.id}}?_method=PUT">
 
     Name:<input type="text" value="{{cuisine.name}}" placeholder="name" name="name" /> <br>
-    Place of Origin:<input value="{{cuisine.name}}" type="text" placeholder="placeOfOrigin" name="placeOfOrigin" /> <br>
-
+    Place of Origin:<input value="{{cuisine.placeOfOrigin}}" type="text" placeholder="placeOfOrigin"
+      name="placeOfOrigin" /> <br>
+    About:<br>
+    <textarea type="text" name="about" cols="80" rows="8" />
+      {{cuisine.about}} 
+    </textarea><br>
     <input type="submit" value="Create Cuisine" />
+
   </form>
-  
+
 </main>

@@ -3,10 +3,30 @@ body{
 }
 h1{
     text-align: center;
+    padding-bottom: 20px;
     font-size: 45px;
+}
+a{
+    text-decoration: none;
+    margin-left: 15px;
 }
 .cookbookImg{
     margin: 0 100px;
     width: 80%;
     height: 450px;
+}
+.cuisines{
+    text-align: center;
+
+}
+nav{
+    text-align: right;
+    padding:20px;
+    margin: 0;
+}
+header{
+    background-color: honeydew;
+}
+.cuisineNameLink{
+    font-size: 24px;
 }

@@ -1,13 +1,19 @@
-<main>
-  <h1>Add Cuisine to My Cookbook</h1>
+<main class="cuisines">
+
+  <header>
+    <nav>
       <a href="/cuisines">Back to Cuisines</a>
+    </nav>
+    <h1>Add Cuisine to My Cookbook</h1>
+  </header>
 
   <form method="POST" action="/cuisines">
-
     Name:<input type="text" placeholder="name" name="name" /> <br>
     Place of Origin:<input type="text" placeholder="placeOfOrigin" name="placeOfOrigin" /> <br>
-
+    About:<br>
+    <textarea type="text" name="about" cols="80" rows="8" />
+    </textarea><br>
     <input type="submit" value="Create Cuisine" />
   </form>
-  
+
 </main>

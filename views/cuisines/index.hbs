@@ -1,14 +1,28 @@
-<main>
-    <H1>All Cuisines</H1>
-    <ul>
-        {{#each cuisines}}
-        <li>
-            <a href="/cuisines/{{ id }}">{{ name }}</a>
-        </li>
-        {{/each}}
-    </ul>
+<main class='cuisines'>
+    <header>
 
-    <a href="/">Back to My Cookbook</a>
-    <a href="/cuisines/new">Add New Cuisine</a>
+        <nav>
+            <a href="/">Back to My Cookbook</a>
+            <a href="/cuisines/new">Add New Cuisine</a>
+            
+        </nav>
+
+        <H1>All Cuisines</H1>
+
+    </header>
+
+    {{#each cuisines}}
+    <a href="/cuisines/{{ id }}" class="cuisineNameLink">
+           <h3>{{ name }}</h3> 
+
+            <p>
+               Place of origin: {{placeOfOrigin}}
+            </p>
+            <p>
+               About: {{about}}
+            </p>
+    </a>
+    {{/each}}
+
 
 </main>

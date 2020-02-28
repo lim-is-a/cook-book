@@ -24,6 +24,7 @@ const Cuisine = new Schema({
     required: true,
   },
   placeOfOrigin: String,
+  about: String,
   recipes: [{type: Schema.ObjectId, ref: 'Recipe'}]
 })
 

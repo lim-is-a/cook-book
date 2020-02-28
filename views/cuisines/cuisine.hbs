@@ -1,23 +1,19 @@
-<main>
-  <H1>{{cuisine.name}} Cuisine! </H1>
-  <a href="/cuisines">Back to Cuisines</a>
-  <a href="./{{cuisine.id}}/edit">Edit Cuisine</a>
-{{#each recipes}}
-<p> {{recipe.name}}</p> 
-{{/each}}
+<main class="cuisines">
+  <header>
+    <nav id="cuisineNav">
 
-<h3>Place of origin:</h3>
-<p>
-    {{cuisine.placeOfOrigin}}
-</p>
-<h3>About:</h3>
-<p>
-    {{cuisine.about}}
-</p>
-<h3>Recipes:</h3>
-<p>
-    {{cuisine.recipes}}
-</p>
+      <a href="/cuisines">Back to Cuisines</a>
+      <a href="./{{cuisine.id}}/edit">Edit Cuisine</a>
+
+    </nav>
+    <H1>{{cuisine.name}} Cuisine Recipes </H1>
+
+  </header>
+
+  {{#each recipes}}
+  <p> {{recipe.name}}</p>
+  {{/each}}
+
   <form method="POST" action="/cuisines/{{cuisine.id}}?_method=DELETE">
     <input type="submit" value="Delete" />
   </form>
