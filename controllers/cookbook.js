@@ -73,7 +73,11 @@ cookbookRouter.post('/cookbooks', (req, res)=>{
     res.redirect('/cookbooks')
   })
 })
-
+cookbookRouter.get('/cookbooks', (req, res) => {
+  Cookbook.find().then(()=>{
+    res.render('cookbooks/index')    
+  })
+})
 
 /* Step 5
  *
