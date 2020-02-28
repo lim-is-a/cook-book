@@ -1,10 +1,10 @@
-<main class='cuisines'>
+<main>
     <header>
 
         <nav>
             <a href="/">Back to My Cookbook</a>
             <a href="/cuisines/new">Add New Cuisine</a>
-            
+
         </nav>
 
         <H1>All Cuisines</H1>
@@ -12,16 +12,20 @@
     </header>
 
     {{#each cuisines}}
-    <a href="/cuisines/{{ id }}" class="cuisineNameLink">
-           <h3>{{ name }}</h3> 
+    <div class="cuisineContainer">
+        <a href="/cuisines/{{ id }}" class="center cuisineNameLink ">
+            <h2>{{ name }}</h2>
+        </a>
+        <h3>Place of origin: </h3>
+        <p>
+            {{placeOfOrigin}}
+        </p>
+        <h3> About: </h3>
+        <p>
+            {{about}}
+        </p>
+    </div>
 
-            <p>
-               Place of origin: {{placeOfOrigin}}
-            </p>
-            <p>
-               About: {{about}}
-            </p>
-    </a>
     {{/each}}
 
 
