@@ -70,7 +70,7 @@ cookbookRouter.delete('/cookbooks/:cookbookId', (req, res)=>{
 // #CREATE - POST req - to create/add cookbooks
 cookbookRouter.post('/cookbooks', (req, res)=>{
   Cookbook.create(req.body).then(()=>{
-    res.redirect('/cookbooks')
+    res.redirect('/cookbooks/index')
   })
 })
 cookbookRouter.get('/cookbooks', (req, res) => {
