@@ -1,7 +1,11 @@
 <main>
 
-  <h1>Edit recipe</h1>
+<header>
+  <nav>
   <a href="/recipes/{{recipe.id}}">Back to Recipe</a>
+  </nav>
+  <h1>Edit recipe</h1>
+</header>
 
   {{!-- <form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT"> --}}
   <form method="POST" action="/recipes/{{recipe.id}}?_method=PUT">

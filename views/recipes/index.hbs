@@ -1,7 +1,11 @@
 <main>
     <h1>All Recipes</h1>
-    <a href="/">Back to My Cookbook</a>
-    <a href="/recipes/new">Add New Recipe</a>
+    <header>
+        <nav>
+            <a href="/">Back to My Cookbook</a>
+            <a href="/recipes/new">Add New Recipe</a>
+        </nav>
+    </header>
 
     {{#each recipes}}
     <a href="/recipes/{{id}}">

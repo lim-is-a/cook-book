@@ -1,16 +1,20 @@
 {{!-- <form method="POST" action="/<TODO: models url here (e.g: /accounts)>"> --}}
 
 <main>
-  <h1>Add new recipe to My Cookbook</h1>
+  <header>
+    <nav>
       <a href="/recipes">Back to Recipes</a>
+    </nav>
+    <h1>Add new recipe to My Cookbook</h1>
+  </header>
 
   <form method="POST" action="/recipes">
 
     Name:<input type="text" placeholder="name" name="name" /> <br>
     Image: <input type="text" placeholder="image address" name="image" /> <br>
     Ingredients: <br>
-        <textarea type="text" name="ingredients" cols="50" rows="10" />
-        </textarea><br>
+    <textarea type="text" name="ingredients" cols="50" rows="10" />
+    </textarea><br>
     {{!-- <form method="POST" action="/recipe.ingredients">
       Ingredients: <input type="text" placeholder="name" name="name" />
       Quantity:<input type="number" placeholder="quantity" name="quantity" />
