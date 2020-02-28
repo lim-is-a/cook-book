@@ -38,12 +38,12 @@ cookbookRouter.get('/cookbooks/new', (req,res)=>{
 })
 
 // #SHOW - GET req - takes you to SPECIFIC cookbook
-cookbookRouter.get('/cookbooks/:cookbookId', (req,res)=>{
-  Cookbook.findById(req.params.cookbookId).then((cookbook)=>{
-    console.log(cookbook);
-    res.render('cookbooks/cookbook',{cookbook})
-  })
-}) 
+// cookbookRouter.get('/cookbooks/:cookbookId', (req,res)=>{
+//   Cookbook.findById(req.params.cookbookId).then((cookbook)=>{
+//     console.log(cookbook);
+//     res.render('cookbooks/cookbook',{cookbook})
+//   })
+// }) 
 
 // #EDIT - GET req - take you to editForm
 cookbookRouter.get('/cookbooks/:cookbookId/edit', (req, res)=>{
@@ -70,12 +70,12 @@ cookbookRouter.delete('/cookbooks/:cookbookId', (req, res)=>{
 // #CREATE - POST req - to create/add cookbooks
 cookbookRouter.post('/cookbooks', (req, res)=>{
   Cookbook.create(req.body).then(()=>{
-    res.redirect('/cookbooks/index')
+    res.redirect('/cookbooks')
   })
 })
 cookbookRouter.get('/cookbooks', (req, res) => {
   Cookbook.find().then(()=>{
-    res.render('cookbooks/index')    
+    res.render('cookbooks')    
   })
 })
 

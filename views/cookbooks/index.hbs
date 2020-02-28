@@ -10,11 +10,12 @@
         <H1>All Cookbooks</H1>
 
     </header>
-
+ <h2>This cookbook belongs to {{ cookbooks.belongsTo }}.</h2>
     {{#each cookbooks}}
+
     <div class="center">
         <a href="/cookbooks/{{ id }}" class="center ">
-            <h2>This cookbook belongs to {{ name }}.</h2>
+           
         </a>
         
         <h3> Created on: </h3>
