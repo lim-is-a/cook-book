@@ -41,7 +41,7 @@ cookbookRouter.get('/cookbooks/new', (req,res)=>{
 cookbookRouter.get('/cookbooks/:cookbookId', (req,res)=>{
   Cookbook.findById(req.params.cookbookId).then((cookbook)=>{
     console.log(cookbook);
-    res.render('cookbooks/cookbook',{cookbook})
+    res.render('cookbooks/show',{cookbook})
   })
 }) 
 
@@ -75,6 +75,7 @@ cookbookRouter.post('/cookbooks', (req, res)=>{
 })
 cookbookRouter.get('/cookbooks', (req, res) => {
   Cookbook.find().then((cookbooks)=>{
+    console.log(cookbooks)
     res.render('cookbooks/index',{cookbooks})    
   })
 })
